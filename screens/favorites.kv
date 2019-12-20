@@ -1,0 +1,29 @@
+<Favorites>:
+    name: "favorites"
+    height: 200
+    canvas.before: 
+        Color: 
+            rgba: 0.2,0.2,0.2,0.5
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: "vertical"
+        
+        Title:
+            text: "FAVORITES"
+            size_hint_y: 0.1
+            color: [1,0.9,0.2,1]
+        BoxLayout:
+            orientation: "vertical"
+            id: fav_ideas
+            on_parent: root.update(fav_ideas)
+            size_hint_y: 0.9
+        MButton:
+            text: "SAVE"
+            pos_hint: {'center_x': 0.5, 'center_y': 0.25}
+            background_color:[0.7,0.7,0,1]
+            on_press: self.background_color = [1,1,0,1]
+            on_release: self.background_color = [0.7,0.7,0,1]
+            size_hint_y: 0.20
+            size_hint_x: 0.25

@@ -1,0 +1,21 @@
+<History>:
+    name: "history"
+    height: 200
+    canvas.before: 
+        Color: 
+            rgba: 0.2,0.2,0.2,0.5
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: "vertical"
+        
+        Title:
+            text: "HISTORY"
+            size_hint_y: 0.1
+            color: [1,0.2,1,1]
+        BoxLayout:
+            orientation: "vertical"
+            id: idea_history
+            on_parent: root.update(idea_history)
+            size_hint_y: 0.9
