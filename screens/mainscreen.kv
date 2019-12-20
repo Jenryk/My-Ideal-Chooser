@@ -1,0 +1,39 @@
+<MainScreen>:
+    name: "mainscreen"
+    canvas.before: 
+        Color: 
+            rgba: 0.2,0.2,0.2,0.5
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    CButton:
+        pos_hint: {'right' : 1, 'center_y' : 0.95}
+        text: '>'
+    CButton:
+        pos_hint: {'x' : 0 , 'center_y' : 0.95}
+        text: '<'
+
+
+    BoxLayout:
+        orientation: "vertical"
+        Title:
+            size_hint_y: 0.2
+        BoxLayout:
+            
+            orientation: 'horizontal'
+            Idea:
+                id: idea
+                font_size: 40
+                pos_hint: {'center_x': 0.3, 'center_y': 0.53}
+                on_parent: root.change_text(idea,favorite)
+            Star:
+                id: favorite
+                size_hint_x: 0.2
+                size_hint_y: 0.2
+                pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        MButton:
+            pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+            on_press: root.change_text(idea,favorite)
+            on_press: self.background_color = [0.3,0.55,1,1]
+            on_release: self.background_color = [0.2,0.45,0.9,1]

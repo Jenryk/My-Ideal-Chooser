@@ -1,0 +1,38 @@
+<Label>:
+    font_name: "Nunito-Bold"
+
+<Title@Label>:
+    text: "Ideal Chooser"
+    pos_hint: {'center_x' : 0.5, 'center_y' : 0.9}     
+    color: [0.3,0.5,0.9,1]
+    bold: True
+    font_size: 30
+
+<Idea@Label>:
+    
+    text: "Choosen Idea"
+    pos_hint: {'center_x' : 0.5, 'center_y' : 0.6}     
+    font_size: 20
+    color: [0.8,0.9,0.9,1]
+    size_hint_y: 1
+
+<MButton@Button>:
+    pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+    text: "Another Idea !"
+    font_size: 17
+    size_hint_x: 0.20
+    size_hint_y: 0.20
+    bold: True
+    color: [0.8,0.8,0.8,1]
+    background_color: [0.2,0.45,0.9,1]
+    background_normal: ''
+    background_down: ''
+
+<CButton@MButton>:
+    size_hint_x: 0.1
+    size_hint_y: 0.1 
+    background_color: [0.5,0.5,0.5,1]
+    on_press: self.background_color = [0.7,0.7,0.7,1]
+    on_release: self.background_color = [0.5,0.5,0.5,1]
+
+    
